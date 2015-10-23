@@ -35,6 +35,6 @@ public class Main {
     }
 
     private void testujPodzielniki(){
-        Podzielniki.liczbyBedaceSumaPodzielnikow(100000);
+        Podzielniki.liczbyBedaceSumaPodzielnikow(10000);
     }
 }
