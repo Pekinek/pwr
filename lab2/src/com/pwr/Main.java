@@ -1,4 +1,4 @@
-package src.com.pwr;
+package com.pwr;
 
 public class Main {
 

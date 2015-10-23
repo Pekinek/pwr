@@ -1,8 +1,5 @@
-package src.com.pwr;
+package com.pwr;
 
-/**
- * Created by Michał on 2015-10-22.
- */
 public class Trojkat {
     private int a, b, c;
 
@@ -39,11 +36,7 @@ public class Trojkat {
     }
 
     public boolean czyMoznaZbudowac(){
-        if(a+b>=c){
-            return true;
-        } else {
-            return false;
-        }
+        return a + b >= c;
     }
 
     public void info(){
@@ -56,10 +49,10 @@ public class Trojkat {
 
     private String dlugosciBokow(){
         String opis;
-        if(a == b && b == c){
+        if((a == b) && (b == c)){
             opis = "równoboczny";
         }
-        else if(a == b || b == c || a == c){
+        else if((a == b) || (b == c) || (a == c)){
             opis = "równoramienny";
         } else {
             opis = "różnoboczny";
@@ -69,9 +62,9 @@ public class Trojkat {
 
     private String katyTrojkata(){
         String opis;
-        if(a*a + b*b > c*c){
+        if(((a * a) + (b * b)) > (c * c)){
             opis="ostrokątny";
-        } else if(a*a + b*b == c*c){
+        } else if(((a * a) + (b * b)) == (c * c)){
             opis="prostokątny";
         } else {
             opis="rozwartokątny";

@@ -1,4 +1,4 @@
-package src.com.pwr;
+package com.pwr;
 
 
 public class Book {
@@ -38,7 +38,7 @@ public class Book {
         System.out.println("Tytul: " + tytul);
         System.out.println("Autor: " + autor);
         System.out.println("Strony: " + strony);
-        if(sygnatura == ""){
+        if("".equals(sygnatura)){
             System.out.println("Sygnatura: ZZZZ");
         } else {
             System.out.println("Sygnatura: " + sygnatura);
@@ -64,10 +64,6 @@ public class Book {
     }
 
     public boolean czyWypozyczona(){
-        if(wypozyczone == 1){
-            return true;
-        } else {
-            return false;
-        }
+        return wypozyczone == 1;
     }
 }
