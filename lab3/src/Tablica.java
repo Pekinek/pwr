@@ -20,8 +20,8 @@ public class Tablica{
     }
 
     public void wyswietl(){
-        for(int element: tablica){
-            System.out.print(element);
+        for(int i=0; i<rozmiar; i++){
+            System.out.print(tablica[i]);
             System.out.print(", ");
         }
         System.out.println();
@@ -43,6 +43,7 @@ public class Tablica{
     }
 
     public boolean czyWystepuje(int liczba, int zakres){
+        if(zakres > rozmiar) zakres = rozmiar;
         for(int i = 0; i<zakres; i++){
             if(liczba == tablica[i]){
                 return true;
@@ -53,7 +54,20 @@ public class Tablica{
 
     public boolean czyRoznowartosciowa(){
         for(int i=0; i<rozmiar; i++){
-            for
+            for(int j=i+1; j<rozmiar; j++){
+                if(tablica[i] == tablica[j]) return false;
+            }
+        }
+        return true;
+    }
+
+    public void usunWszystkie(int liczba){
+        for(int i=0; i<rozmiar; i++){
+            if(tablica[i] == liczba){
+                tablica[i] = tablica[rozmiar-1];
+                tablica[rozmiar-1] = 0;
+                rozmiar--;
+            }
         }
     }
 }
