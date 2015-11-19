@@ -3,6 +3,10 @@
  */
 public class App {
     public static void main(String[] args){
+        testujTab2();
+    }
+
+    public static void testujTab1(){
         Tablica t = new Tablica(10);
         t.wypelnij(40);
         t.wyswietl();
@@ -11,5 +15,14 @@ public class App {
         System.out.println("Czy różnowartościowa?: " + t.czyRoznowartosciowa());
         t.usunWszystkie(5);
         t.wyswietl();
+    }
+
+    public static void testujTab2(){
+        Tablica2 t = new Tablica2(4, 6, 10);
+        t.wyswietlKolumnami();
+        t.wyswietlWierszami();
+        t.sumaElementow();
+        t.wartoscMaksymalna();
+        System.out.println("Czy wystepuje?: + " t.czyWystepuje(5)[0] + " " + t.czyWystepuje(5)[1]);
     }
 }
