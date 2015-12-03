@@ -23,6 +23,7 @@ public class App {
         t.wyswietlWierszami();
         t.sumaElementow();
         t.wartoscMaksymalna();
-        System.out.println("Czy wystepuje?: + " t.czyWystepuje(5)[0] + " " + t.czyWystepuje(5)[1]);
+        System.out.println("Czy wystepuje?: " + t.czyWystepuje(15)[1] + " " + t.czyWystepuje(15)[0]);
+        t.najwiekszyWiersz();
     }
 }
